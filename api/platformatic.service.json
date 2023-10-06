@@ -1,0 +1,25 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.1.1/service",
+  "service": {
+    "openapi": true
+  },
+  "plugins": {
+    "paths": [
+      {
+        "path": "./plugins",
+        "encapsulate": false,
+        "options": {
+          "greeting": "{PLT_GREETING}"
+        }
+      },
+      "./routes"
+    ]
+  },
+  "server": {
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PORT}",
+    "logger": {
+      "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    }
+  }
+}
